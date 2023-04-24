@@ -13,28 +13,30 @@ To use this tool, you need to have the following:
 ## Usage
 
 1. Clone or download this repository to your local machine:
-
+```bash
 git clone https://github.com/loeken/cloudflare-zone-wiper.git
-
+```
 
 2. Navigate to the directory where you downloaded the files:
-
+```bash
 cd cloudflare-zone-wiper
+```
 
 1. Install the necessary dependencies:
-
+```bash
 go mod download
-
+```
 
 1. Set the `API_TOKEN` and `DOMAIN` environment variables with your Cloudflare API token and the domain name for which you want to delete DNS records:
-
+```bash
 export API_TOKEN=YOUR_CLOUDFLARE_API_TOKEN
 export DOMAIN=example.com
+```
 
 1. Run the tool:
-
+```bash
 go run main.go
-
+```
 
 The tool will use the Cloudflare API to retrieve the zone ID for the specified domain name, then delete all DNS records for that zone.
 
